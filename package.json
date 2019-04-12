@@ -1,0 +1,16 @@
+{
+  "name": "js-tdd-curse",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "js",
+    "tdd",
+    "library"
+  ],
+  "author": "Willian de Souza Felisberto <willianaru@gmail.com> (http://willsouza.me/)",
+  "license": "ISC"
+}
