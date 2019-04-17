@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>02 - template literal para html fragments</title>
+</head>
+<body>
+
+  <script>
+
+  const article = {
+    title: 'Teste',
+    into: 'Dolor nostrud occaecat velit sit nulla do voluptate incididunt anim sunt.',
+    body: 'Irure laborum culpa amet irure minim tempor incididunt mollit laboris qui tempor non cupidatat. Nostrud occaecat esse fugiat incididunt. Culpa sint proident anim ipsum minim nulla quis consectetur elit non in ipsum. Quis ipsum est nisi Lorem eiusmod eiusmod pariatur ullamco.',
+    tags: ['es6', 'js', 'aaaa'],
+    author: 'Willian'
+  };
+  function renderAuthor(name) {
+    return(name) ? name : 'Unknown';
+  }
+  const markup = `
+    <article>
+      <header>
+        <h1>${article.title}</h1>
+      </header>
+      <section>
+        <p>${article.into}</p>
+      </section>
+      <footer>
+        <ul>
+          ${article.tags.map((tag) => `<li>${tag}</li>`).join('')}
+        </ul>
+        <p>Author: ${renderAuthor(article.author)}</p>
+      </footer>
+    </article>
+  `;
+    document.body.innerHTML = markup;
+  </script>
+</body>
+</html>

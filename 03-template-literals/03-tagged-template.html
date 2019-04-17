@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>03 - tagged template literal</title>
+</head>
+
+<style>
+  .green{
+    color: green;
+    font-size: 25px;
+  }
+</style>
+<body>
+<script>
+
+  const city = 'Dublin';
+  const something = 'Guinness';
+  const otherthing = 'Leprechauns';
+
+  function green(template, ...values){
+    return template.reduce((accumulator, part,i) => {
+      return `
+        ${accumulator}
+        <span class="green">${values[i-1].toUpperCase()}</span>
+        ${part}
+      `
+    });
+  }
+  const ireland = green`I Live in ${city} the city of ${something} and ${otherthing}`;
+
+  document.body.innerHTML = ireland;
+
+</script>
+</body>
+</html>
